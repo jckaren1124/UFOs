@@ -24,7 +24,7 @@ function buildTable(data) {
 }
 
 // 1. Create a variable to keep track of all the filters as an object.
-var filters = [];
+var filters = {};
 
 // 3. Use this function to update the filters. 
 function updateFilters() {
@@ -40,7 +40,7 @@ function updateFilters() {
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
   if (elementValue) {
-    filters(filterId) = elementValue;
+    filters[filterId] = elementValue;
   }
   else {
     delete filters[filterId];
@@ -58,9 +58,10 @@ function updateFilters() {
   
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
-    tableData.forEach(function(filters) {
+    //https://docs.w3cub.com/javascript/global_objects/object/entries
+    Object.entries(filters).forEach(([key, value]) => {
       filteredData = filteredData.filter(row => row.key === value);
-    })  
+    });
   
     // 10. Finally, rebuild the table using the filtered data
     buildTable(filteredData);  
