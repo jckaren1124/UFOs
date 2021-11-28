@@ -13,14 +13,14 @@
     />
     <link rel="stylesheet" href="static/css/style.css">
 </head>
-<body>
+<body class="bg-dark">
     <div class="wrapper">
-        <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.html">UFO Sightings</a>
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+            <a class="navbar-brand" href="index_challenge.html">UFO Sightings</a>
         </nav>
     </div>
     <div class="jumbotron">
-        <h1>The Truth Is Out There</h1>
+        <h1 class="display-4">The Truth Is Out There</h1>
     </div>
     <div class="container-fluid">
         <div class="row">
@@ -37,22 +37,30 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
-                <form>
+                <form class="bg-dark">
                     <p>Filter Search</p>
                 </form>
-                <ul class="list-group">
-                    <li class="list-group-item">
+                <ul class="list-group bg-dark">
+                    <li class="list-group-item bg-dark">
                         <label for="date">Enter Date</label>
+                        <input type="text" placeholder="1/10/2010" id="datetime"/>
+                    </li>                    
+                    <li class="list-group-item bg-dark">
+                        <label for="text">Enter a City</label>
+                        <input type="text" placeholder="roswell" id="city"/>
                     </li>
-                        <input type="text" placeholder="1/10/2010" id="datetime" />
-                    <li class="list-group-item">                        
-                        <label for="text">City</label>
-                    <li class="list-group-item">                        
-                        <label for="text">State</label>
-                    <li class="list-group-item">                        
-                        <label for="text">Country</label>
-                    <li class="list-group-item">                        
-                        <label for="text">Shape</label>                    
+                    <li class="list-group-item bg-dark">                        
+                        <label for="text">Enter a State</label>
+                        <input type="text" placeholder="ca" id="state"/>
+                    </li>
+                    <li class="list-group-item bg-dark">                        
+                        <label for="text">Enter a Country</label>
+                        <input type="text" placeholder="us" id="country"/>
+                    </li>
+                    <li class="list-group-item bg-dark">                        
+                        <label for="text">Enter a Shape</label>
+                        <input type="text" placeholder="circle" id="shape"/>
+                    </li>
                 </ul>
             </div>
             <div class="col-md-9">
@@ -67,11 +75,14 @@
                             <th>Duration</th>
                             <th>Comments</th>
                         </tr>
-
                     </thead>
+                    <tbody></tbody>
                 </table>
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="static/js/data.js"></script>
+    <script src="static/js/app_challenge.js"></script>  
 </body>
 </html>
