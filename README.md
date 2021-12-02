@@ -20,3 +20,4 @@ Users can also enter multiple search criteria to further reduce and filter the d
 
 
 ## Summary
+This JavaScript code in combination with HTML provides a great way to filter UFO sightings data in the table.  However, the filter search is case sensitive, so if the input contains uppercase letters, then no data will be returned. This is why the "shadow" text is shown with all lowercase letters. One way to communicate case sensitivity to users would be to indicate on the website under tbody to please enter all lowercase letters in their search. Another solution might be to update the code that converts uppercase letters into lowercase letters when users are entering information in the textbox. 
